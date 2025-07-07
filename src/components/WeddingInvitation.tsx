@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import floralFrame from '@/assets/wedding-floral-frame.jpg';
-import goldOrnament from '@/assets/gold-ornament.png';
 
 const WeddingInvitation = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -29,14 +28,6 @@ const WeddingInvitation = () => {
           
           {/* Content Container */}
           <div className="relative z-10 px-8 py-12 text-center">
-            {/* Top Ornamental Border */}
-            <div className="mb-8">
-              <img 
-                src={goldOrnament} 
-                alt="" 
-                className="w-32 h-auto mx-auto opacity-80 animate-float"
-              />
-            </div>
 
             {/* Couple Names - Hero Typography */}
             <div className="mb-8">
@@ -53,14 +44,6 @@ const WeddingInvitation = () => {
               </h1>
             </div>
 
-            {/* Ornamental Divider */}
-            <div className="mb-8">
-              <img 
-                src={goldOrnament} 
-                alt="" 
-                className="w-24 h-auto mx-auto opacity-60 rotate-180"
-              />
-            </div>
 
             {/* Event Details */}
             <div className="space-y-4 animate-fade-in-up">
@@ -110,15 +93,6 @@ const WeddingInvitation = () => {
               </div>
             </div>
 
-            {/* Bottom Ornamental Border */}
-            <div className="mt-8">
-              <img 
-                src={goldOrnament} 
-                alt="" 
-                className="w-32 h-auto mx-auto opacity-80 animate-float"
-                style={{ animationDelay: '2s' }}
-              />
-            </div>
           </div>
 
           {/* Subtle Gold Sparkle Overlay */}
