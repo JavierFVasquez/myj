@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import bgLeaves from '@/assets/background.png';
+import bgLeaves from '@/assets/background.webp';
 
 const WeddingInvitation = () => {
   const [isVisible, setIsVisible] = useState(false);
