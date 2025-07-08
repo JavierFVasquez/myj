@@ -1,8 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-navy: #1b2a46;
+  --color-gold: #d4af37;
+}
+
+body {
+  background: var(--color-navy);
+  color: #fff;
+}
+
+.bg-navy {
+  background-color: var(--color-navy) !important;
+}
+.text-gold {
+  color: var(--color-gold) !important;
+}
+.border-gold {
+  border-color: var(--color-gold) !important;
+}
+.bg-gold {
+  background-color: var(--color-gold) !important;
+}
+
 /* Luxury Wedding Design System - Sophisticated black, white, and gold palette */
+
+.bodoni-moda-sc {
+  font-family: 'Bodoni Moda SC', serif;
+  font-weight: 400;
+}
+
+.imperial-script-regular {
+  font-family: "Imperial Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
 
 @layer base {
   :root {

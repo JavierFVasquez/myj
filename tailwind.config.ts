@@ -26,12 +26,6 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				
 				/* Luxury Color Palette */
-				gold: {
-					primary: 'hsl(var(--gold-primary))',
-					secondary: 'hsl(var(--gold-secondary))',
-					accent: 'hsl(var(--gold-accent))',
-					muted: 'hsl(var(--gold-muted))'
-				},
 				elegant: {
 					black: 'hsl(var(--black-primary))',
 					'black-secondary': 'hsl(var(--black-secondary))',
@@ -39,6 +33,17 @@ export default {
 					white: 'hsl(var(--white-primary))',
 					'white-secondary': 'hsl(var(--white-secondary))',
 					'white-muted': 'hsl(var(--white-muted))'
+				},
+				navy: {
+					DEFAULT: '#19213a',
+					light: '#232c4b',
+					600: '#1a2238',
+					700: '#151d30',
+					800: '#101728',
+				},
+				gold: {
+					DEFAULT: '#d4af37',
+					light: '#f5e7b2',
 				},
 				
 				primary: {

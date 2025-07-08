@@ -1,0 +1,84 @@
+{
+  "name": "J&M Boda - Mary & Javi",
+  "short_name": "J&M Boda",
+  "description": "Invitación de boda de Mary & Javi - 20 de Diciembre 2025",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#1b2a46",
+  "background_color": "#1b2a46",
+  "lang": "es",
+  "scope": "/",
+  "categories": ["lifestyle", "social"],
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "RSVP",
+      "short_name": "Confirmar",
+      "description": "Confirmar asistencia a la boda",
+      "url": "/#rsvp",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Ubicación",
+      "short_name": "Lugar",
+      "description": "Ver ubicación de la boda",
+      "url": "/#location",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Itinerario",
+      "short_name": "Horarios",
+      "description": "Ver horarios del evento",
+      "url": "/#itinerary",
+      "icons": [
+        {
+          "src": "/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+} 

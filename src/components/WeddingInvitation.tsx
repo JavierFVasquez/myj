@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import floralFrame from '@/assets/wedding-floral-frame.jpg';
+import bgLeaves from '@/assets/background.png';
 
 const WeddingInvitation = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -9,111 +9,81 @@ const WeddingInvitation = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-elegant-white flex items-center justify-center p-4">
-      <div 
-        className={`relative max-w-md w-full mx-auto transition-all duration-1000 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}
-      >
-        {/* Main Invitation Card */}
-        <div className="relative bg-elegant-white rounded-lg shadow-luxury overflow-hidden">
-          {/* Floral Frame Background */}
-          <div 
-            className="absolute inset-0 bg-cover bg-center opacity-90"
-            style={{ backgroundImage: `url(${floralFrame})` }}
+    <div className="min-h-screen flex items-center justify-center bg-navy p-4 pb-32 sm:pb-24 transition-all duration-700">
+      <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto flex items-center justify-center" style={{ minHeight: 420 }}>
+        {/* Fondo de hojas doradas centrado, solo detrás de la invitación */}
+        <div
+          className="absolute inset-0 flex items-center justify-center z-0"
+          style={{
+            pointerEvents: 'none',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
+          <img
+            src={bgLeaves}
+            alt="Fondo hojas doradas"
+            style={{
+              width: '120%',
+              height: '120%',
+              maxWidth: 750,
+              maxHeight: 750,
+              minWidth: 750,
+              minHeight: 750,
+              objectFit: 'contain',
+              margin: '0 auto',
+              opacity: 0.97,
+              filter: 'drop-shadow(0 2px 16px #0004)'
+            }}
           />
-          
-          {/* Elegant Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-elegant-white/20 via-transparent to-elegant-white/30" />
-          
-          {/* Content Container */}
-          <div className="relative z-10 px-8 py-12 text-center">
-
-            {/* Couple Names - Hero Typography */}
-            <div className="mb-8">
-              <h1 className="font-wedding-script text-6xl font-bold text-elegant-black mb-2 animate-fade-in-up">
-                Mary
-              </h1>
-              <div className="flex items-center justify-center my-4">
-                <div className="h-px bg-gold-primary w-12"></div>
-                <span className="mx-4 text-gold-primary font-elegant-serif text-lg font-light">&</span>
-                <div className="h-px bg-gold-primary w-12"></div>
-              </div>
-              <h1 className="font-wedding-script text-6xl font-bold text-elegant-black animate-fade-in-up">
-                Javi
-              </h1>
-            </div>
-
-
-            {/* Event Details */}
-            <div className="space-y-4 animate-fade-in-up">
-              {/* Date */}
-              <div className="mb-6">
-                <p className="font-elegant-serif text-2xl font-medium text-elegant-black mb-2">
-                  December 20, 2025
-                </p>
-              </div>
-
-              {/* Venue */}
-              <div className="mb-6">
-                <p className="font-elegant-serif text-lg text-elegant-black leading-relaxed">
-                  Hacienda Riojana
-                </p>
-                <p className="font-elegant-serif text-base text-elegant-black-muted">
-                  Marinilla, Antioquia
-                </p>
-              </div>
-
-              {/* Reception Notice */}
-              <div className="mb-8">
-                <p className="font-elegant-serif text-base text-elegant-black-muted italic">
-                  Reception to follow
-                </p>
-              </div>
-
-              {/* Time and RSVP Placeholder Areas */}
-              <div className="space-y-4">
-                <div className="bg-elegant-white-secondary/80 rounded-lg p-4 border border-gold-accent/30">
-                  <p className="font-elegant-serif text-sm text-elegant-black-muted mb-1">
-                    Ceremony Time
-                  </p>
-                  <p className="font-elegant-serif text-lg text-elegant-black">
-                    [Time to be announced]
-                  </p>
-                </div>
-                
-                <div className="bg-elegant-white-secondary/80 rounded-lg p-4 border border-gold-accent/30">
-                  <p className="font-elegant-serif text-sm text-elegant-black-muted mb-1">
-                    RSVP Information
-                  </p>
-                  <p className="font-elegant-serif text-base text-elegant-black">
-                    [Contact details to follow]
-                  </p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          {/* Subtle Gold Sparkle Overlay */}
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-gold-secondary rounded-full animate-pulse opacity-60"></div>
-            <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-gold-secondary rounded-full animate-pulse opacity-60" style={{ animationDelay: '1s' }}></div>
-            <div className="absolute top-1/2 left-1/6 w-0.5 h-0.5 bg-gold-accent rounded-full animate-pulse opacity-40" style={{ animationDelay: '2s' }}></div>
-            <div className="absolute top-1/3 right-1/6 w-0.5 h-0.5 bg-gold-accent rounded-full animate-pulse opacity-40" style={{ animationDelay: '3s' }}></div>
-          </div>
         </div>
-
-        {/* Elegant Footer Message */}
-        <div className="text-center mt-8 animate-fade-in-up" style={{ animationDelay: '1s' }}>
-          <p className="font-elegant-serif text-sm text-elegant-black-muted italic">
-            Save the Date
-          </p>
-          <div className="w-16 h-px bg-gold-primary mx-auto mt-2 opacity-60"></div>
+        {/* Marco blanco exterior */}
+        <div className={`relative z-10 min-w-[300px]`}>
+          <div className="bg-white" style={{ padding: 12, boxShadow: '0 8px 32px -8px #0006' }}>
+            {/* Marco dorado interior */}
+            <div style={{ border: '2px solid #d4af37', padding: '25px 5px 25px 5px' }}>
+              {/* Contenido */}
+              <div className="flex flex-col items-center text-center">
+                <h1 className="text-7xl md:text-7xl text-navy mb-2 imperial-script-regular">
+                  Mary
+                </h1>
+                <span className="block text-4xl text-gold my-1 font-serif" style={{ fontFamily: 'Playfair Display, serif' }}>&amp;</span>
+                <h1 className="text-7xl md:text-7xl text-navy mb-6 imperial-script-regular">
+                  Javi
+                </h1>
+                {/* Fecha estilo referencia */}
+                <div className="w-full flex flex-col items-center mb-6">
+                  <div className="flex items-center justify-center w-full gap-2 md:gap-6">
+                    {/* SÁBADO */}
+                    <div className="flex flex-col items-center w-20">
+                      <div className="w-full h-px bg-navy mb-1" />
+                      <span className="block text-xs md:text-sm text-navy tracking-widest bodoni-moda-sc font-semibold uppercase">Sábado</span>
+                      <div className="w-full h-px bg-navy mt-1" />
+                    </div>
+                    {/* Centro: Mes, Día, Hora */}
+                    <div className="flex flex-col items-center justify-center min-w-[50px]">
+                      <span className="block text-xs md:text-sm text-navy tracking-widest bodoni-moda-sc font-semibold mb-1" style={{ letterSpacing: '0.18em' }}>DIC</span>
+                      <span className="block text-4xl md:text-5xl text-navy font-bold leading-none bodoni-moda-sc">20</span>
+                      <span className="block text-md md:text-lg text-navy bodoni-moda-sc mt-1">2025</span>
+                    </div>
+                    {/* HORA */}
+                    <div className="flex flex-col items-center w-20">
+                      <div className="w-full h-px bg-navy mb-1" />
+                      <span className="block text-xs md:text-sm text-navy tracking-widest bodoni-moda-sc font-semibold uppercase">3:00 P.M</span>
+                      <div className="w-full h-px bg-navy mt-1" />
+                    </div>
+                  </div>
+                </div>
+                <p className="text-navy text-base bodoni-moda-sc mb-1">Hacienda Riojana</p>
+                <p className="text-navy text-sm mb-2 bodoni-moda-sc">Marinilla, Antioquia</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default WeddingInvitation;
+export default WeddingInvitation; 
